@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const secretarios_routes_1 = require("./secretarios.routes");
+const aluno_routes_1 = require("./aluno.routes");
+const desconto_routes_1 = require("./desconto.routes");
+const pagamento_routes_1 = require("./pagamento.routes");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.use('/secretario', secretarios_routes_1.secretarioRouter);
+router.use('/aluno', aluno_routes_1.alunoRouter);
+router.use('/desconto', desconto_routes_1.descontoRouter);
+router.use('/pagamento', pagamento_routes_1.pagamentoRouter);
